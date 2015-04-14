@@ -1,5 +1,5 @@
 from apps import db
-from apps.UserManage import constants as USER
+from apps.Account import constants as USER
 
 class User(db.Model):
 

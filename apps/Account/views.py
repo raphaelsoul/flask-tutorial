@@ -2,16 +2,16 @@ from flask import Blueprint, request, render_template, flash, g, session, redire
 from werkzeug import check_password_hash, generate_password_hash
 
 from apps import db
-from apps.UserManage.forms import RegisterForm, LoginForm
-from apps.UserManage.models import User
-from apps.UserManage.decorators import requires_login
+from apps.Account.forms import RegisterForm, LoginForm
+from apps.Account.models import User
+from apps.Account.decorators import requires_login
 
 bp_user = Blueprint('users', __name__, url_prefix='/users',template_folder='templates')
 
 @bp_user.route('/me/')
 @requires_login
 def home():
-	return render_template("UserManage/profile.html", user=g.user)
+	return render_template("Account/profile.html", user=g.user)
 
 @bp_user.before_request
 def before_request():
