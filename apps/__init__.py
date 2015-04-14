@@ -1,13 +1,18 @@
 from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
+from flask.ext.migrate import Migrate
+
+#import all configs
 from config import DevConfig,ProductionConfig
 from config import DevTestingConfig, ProTestingConfig
+
 import os
 import sys
 
 app = Flask(__name__)
 app.config.from_object(DevConfig)
 db = SQLAlchemy(app)
+migrate = Migrate(app,db)
 
 def install_secret_key(app, filename='secret_key'):
     """Configure the SECRET_KEY from a file

@@ -5,9 +5,12 @@ import sys
 __author__ = 'raphael'
 
 from flask.ext.script import Manager
+from flask.ext.migrate import MigrateCommand
 from apps import app
 
 manager=Manager(app)
+manager.add_command('db',MigrateCommand)
+
 @manager.command
 def hello():
     print "hello"
