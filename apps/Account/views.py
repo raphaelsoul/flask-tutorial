@@ -22,8 +22,8 @@ def before_request():
 @bp_user.route('/login/', methods=['GET', 'POST'])
 def login():
 	"""
-      Login form
-      """
+	Login form
+	"""
 	form = LoginForm(request.form)
 	# make sure data are valid, but doesn't validate password is right
 	if form.validate_on_submit():

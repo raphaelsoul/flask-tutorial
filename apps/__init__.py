@@ -3,17 +3,16 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.migrate import Migrate
 
 #import all configs
-from config import DevConfig,ProductionConfig
-from config import DevTestingConfig, ProTestingConfig
 
 import os
 import sys
 
 app = Flask(__name__)
-app.config.from_object(DevConfig)
+app.config.from_object('config')
 db = SQLAlchemy(app)
 migrate = Migrate(app,db)
 
+'''
 def install_secret_key(app, filename='secret_key'):
     """Configure the SECRET_KEY from a file
     in the instance directory.
@@ -36,6 +35,7 @@ def install_secret_key(app, filename='secret_key'):
 
 if not app.config['DEBUG']:
     install_secret_key(app)
+'''
 
 @app.errorhandler(404)
 def not_found(error):
