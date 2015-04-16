@@ -3,6 +3,7 @@
 import sys
 
 __author__ = 'raphael'
+__version__ = '0.0.1'
 
 from flask.ext.script import Manager
 from flask.ext.migrate import MigrateCommand
