@@ -3,18 +3,14 @@
 import sys
 
 __author__ = 'raphael'
-__version__ = '0.0.1'
+__version_info__ = ('0', '0', '2')
+__version__ = '.'.join(__version_info__)
 
-from flask.ext.script import Manager
-from flask.ext.migrate import MigrateCommand
-from apps import app
+from apps import manager
+#from apps import app
 
-manager=Manager(app)
-manager.add_command('db',MigrateCommand)
 
-@manager.command
-def hello():
-    print "hello"
+
 
 @manager.command
 def initdb():
@@ -22,14 +18,11 @@ def initdb():
     db.create_all()
     print "database initial complete"
 
+'''
 @manager.command
 def migrate():
     pass
+'''
 
-#if __name__=="__main__":
-#    manager.run()
 if __name__=="__main__":
-    if sys.argv.__len__() > 1:
-        manager.run()
-    else:
-        app.run()
+    manager.run()

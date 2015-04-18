@@ -6,3 +6,8 @@
 
 * build login and auth module
 * improve config fur different environments
+
+##0.0.2
+
+* implement the basic user login
+* build 404 and 401 error handler
