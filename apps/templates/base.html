@@ -1,16 +1,14 @@
- <html>
+<!-- <html>
       <head>
-        <title>{% block title %}My Site{% endblock %}</title>
-        {% block css %}
-        <!--<link rel="stylesheet" href="/static/css/reset-min.css" />-->
-        <!--<link rel="stylesheet" href="/static/css/main.css" />-->
-        {% endblock %}
-        {% block script %}
-        <!--<script src="/static/js/main.js" type="text/javascript"></script>-->
-        {% endblock %}
+        <title>{#% block title %#}My Site{#% endblock %#}</title>
+        {#% block css %##}
+        <link rel="stylesheet" href="/static/css/reset-min.css" />
+        <link rel="stylesheet" href="/static/css/main.css" />
+        {#% block script %#}
+        <script src="/static/js/main.js" type="text/javascript"></script>
       </head>
       <body>
-        <div id="header">{% block header %}{% endblock %}</div>
+        <div id="header">{#% block header %##}{#% endblock %#}</div>
         <div id="messages-wrap">
           <div id="messages">
             {% for category, msg in get_flashed_messages(with_categories=true) %}
@@ -18,7 +16,67 @@
             {% endfor %}
           </div>
         </div>
-        <div id="content">{% block content %}{% endblock %}</div>
-        <div id="footer">{% block footer %}{% endblock %}</div>
+        <div id="content">{#% block content %#}{#% endblock %#}</div>
+        <div id="footer">{#% block footer %#}{#% endblock %#}</div>
       </body>
-    </html>
+    </html>-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>
+            {% block title %}
+                Base
+            {% endblock %}
+        </title>
+<!--global style-->
+{% block global_style %}
+    <link rel="stylesheet" href=""/>
+{% endblock %}
+<!--end global style-->
+
+<!--page level style-->
+{% block page_level_style %}
+    <link rel="stylesheet" href=""/>
+{% endblock %}
+<!--end page level style-->
+
+
+</head>
+<body>
+<!--content-->
+{% block content %}
+    Hello, World!
+{% endblock %}
+<!--end content-->
+
+<!--footer-->
+{% block footer %}
+{% endblock %}
+<!--end footer-->
+
+
+
+
+<!--global global_plugin-->
+{% block global_plugin %}
+{% endblock %}
+<!--end global_plugins-->
+
+<!--global page_level_plugin-->
+{% block page_level_plugin %}
+{% endblock %}
+<!--end page_level_plugins-->
+
+<!--global scripts-->
+{% block global_script %}
+{% endblock %}
+<!--end global scripts-->
+
+<!--page level scripts-->
+{% block page_level_script %}
+{% endblock %}
+<!--end page level scripts-->
+</body>
+</html>
