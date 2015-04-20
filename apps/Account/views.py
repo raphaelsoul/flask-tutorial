@@ -7,7 +7,7 @@ from apps.Account.forms import RegisterForm, LoginForm
 from apps.Account.models import User
 #from apps.Account.decorators import requires_login
 
-bp_user = Blueprint('account', __name__, url_prefix='/account',template_folder='templates')
+bp_user = Blueprint('Account', __name__, url_prefix='/account',template_folder='templates')
 
 @loginmanager.user_loader
 def load_user(id):
