@@ -1,0 +1,12 @@
+img.user-avatar {
+    border-radius: 50% !important;
+}
+
+div.default-first-menu-wrapper li{
+    list-style:none;
+    text-align: center;
+}
+ul.default-second-menu-wrapper li{
+    list-style:none;
+    text-align: center;
+}
