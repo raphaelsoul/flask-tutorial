@@ -31,7 +31,11 @@
 			{% include "frameworks/sidebar.html" %}
 		{% endblock %}
     </div>
-    <div class="col-md-10">主窗口</div>
+    <div class="col-md-10">
+        主窗口
+        {% block custome_page %}
+        {% endblock %}
+    </div>
 </div>
 
 
