@@ -45,7 +45,7 @@ if not app.config['DEBUG']:
 
 @app.route('/')
 def index():
-	return make_response('hello,world')
+	return render_template('base.html')
 
 @app.errorhandler(404)
 def not_found(error):
