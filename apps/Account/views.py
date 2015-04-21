@@ -1,11 +1,10 @@
 from flask import Blueprint, request, render_template, flash, g, session, redirect, url_for,make_response
 from werkzeug import check_password_hash, generate_password_hash
-from flask.ext.login import login_required,current_user,logout_user
+from flask.ext.login import login_required,logout_user
 
 from apps import db,loginmanager,app
 from apps.Account.forms import RegisterForm, LoginForm
 from apps.Account.models import User
-#from apps.Account.decorators import requires_login
 
 bp_user = Blueprint('Account', __name__, url_prefix='/account',template_folder='templates')
 
@@ -14,9 +13,9 @@ def load_user(id):
 	return User.query.get(int(id))
 
 @bp_user.route('/profile/')
-@login_required
-def home():
-	return render_template("profile.html", user=g.user)
+#@login_required
+def profile():
+	return render_template("account.profile.html", user=g.user)
 
 @bp_user.route('/logout/',methods=['GET'])
 @login_required
