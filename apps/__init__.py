@@ -1,7 +1,7 @@
-from flask import Flask, render_template,make_response
+from flask import Flask, render_template,g
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.migrate import Migrate
-from flask.ext.login import LoginManager
+from flask.ext.login import LoginManager,current_user
 from flask.ext.script import Manager
 from flask.ext.migrate import MigrateCommand
 
@@ -43,9 +43,14 @@ if not app.config['DEBUG']:
     install_secret_key(app)
 '''
 
+@app.before_request
+def before_request():
+	g.user = current_user
+
 @app.route('/')
 def index():
 	return render_template('base.html')
+
 
 @app.errorhandler(404)
 def not_found(error):

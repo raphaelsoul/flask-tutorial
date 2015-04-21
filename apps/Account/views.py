@@ -13,11 +13,6 @@ bp_user = Blueprint('Account', __name__, url_prefix='/account',template_folder='
 def load_user(id):
 	return User.query.get(int(id))
 
-@app.before_request
-def before_request():
-	g.user = current_user
-
-
 @bp_user.route('/profile/')
 @login_required
 def home():
