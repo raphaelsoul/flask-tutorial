@@ -26,12 +26,12 @@
 {% endblock %}
 
 <div class="container-fluid">
-    <div class="col-md-2 col-lg-2 hidden-xs hidden-sm">
+    <div class="col-md-2 col-lg-2" id="id_sidebar-wrapper">
         {% block sidebar %}
 			{% include "frameworks/sidebar.html" %}
 		{% endblock %}
     </div>
-    <div class="col-md-10 container-grey">
+    <div class="col-md-10 container-grey" id="id_content">
         {% block custome_page %}
         {% endblock %}
     </div>
@@ -56,6 +56,7 @@
 {% endblock %}
 
 {% block global_script %}
+    {% include "frameworks/global_scripts.html" %}
 {% endblock %}
 
 {% block page_level_script %}

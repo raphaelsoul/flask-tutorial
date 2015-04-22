@@ -25,13 +25,13 @@ h3.page-title {
 }
 
 /* dashboard statik styles */
-div.statics-wrapper {
+div.dashboard-wrapper {
     position: relative;
     display: block;
     background-color: #cccccc;
 }
 
-div.dashboard-static {
+div.dashboard-statistic {
     border-radius: 4px;
     position: relative;
     min-height: 120px;
@@ -39,19 +39,19 @@ div.dashboard-static {
     margin-bottom: 10px;
 }
 
-div.dashboard-static.ds-blue{
+div.dashboard-statistic.ds-blue{
     background-color: #578ebe;
 }
 
-div.dashboard-static.ds-red{
+div.dashboard-statistic.ds-red{
     background-color: #e35b5a;
 }
 
-div.dashboard-static.ds-green{
+div.dashboard-statistic.ds-green{
     background-color: #4cae4c;
 }
 
-div.dashboard-static.ds-purple{
+div.dashboard-statistic.ds-purple{
     background-color: #8775a7;
 }
 
@@ -61,7 +61,7 @@ div.traffic-wrapper{
     background-color: #cccccc;
 }
 
-div.traffic-static.ds-white {
+div.traffic-statistic.ds-white {
     background-color: #ffffff;
     min-height: 600px;
     margin-bottom: 10px;
