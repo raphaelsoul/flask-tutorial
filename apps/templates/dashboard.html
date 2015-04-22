@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block custome_page %}
+
+    {% block page_title %}
+		<div class="row title-wrapper">
+        	<h3 class="page-title">Here is the Title in the page</h3>
+        </div>
+    {% endblock %}
+
+    {% block statics %}
+        <div class="row statics-wrapper">
+        	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-static ds-blue"></div>
+            </div>
+        	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                <div class="dashboard-static ds-green"></div>
+            </div>
+        	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-static ds-red"></div>
+            </div>
+        	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-static ds-purple"></div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block traffic %}
+		<div class="row traffic-wrapper">
+        	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="traffic-static ds-white"></div>
+            </div>
+        	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="traffic-static ds-white"></div>
+            </div>
+        </div>
+    {% endblock %}
+{% endblock %}

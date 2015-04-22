@@ -15,21 +15,28 @@ ul.default-second-menu-wrapper li{
 
 /* page title style */
 h3.page-title {
-    color: #666;
+    color: #000000;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 0px;
     font-size: 28px;
     font-weight: 300;
-    letter-spacing: -1px;
-    margin: 0px 0px 15px 0px;
+    /*letter-spacing: -1px;*/
 }
 
 /* dashboard statik styles */
+div.statics-wrapper {
+    position: relative;
+    display: block;
+    background-color: #cccccc;
+}
+
 div.dashboard-static {
     border-radius: 4px;
     position: relative;
-    min-height: 100px;
+    min-height: 120px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 div.dashboard-static.ds-blue{
@@ -46,4 +53,21 @@ div.dashboard-static.ds-green{
 
 div.dashboard-static.ds-purple{
     background-color: #8775a7;
+}
+
+div.traffic-wrapper{
+    position: relative;
+    display: block;
+    background-color: #cccccc;
+}
+
+div.traffic-static.ds-white {
+    background-color: #ffffff;
+    min-height: 600px;
+    margin-bottom: 10px;
+}
+
+div.container-grey {
+    background-color: #cccccc;
+    border-radius: 6px;
 }

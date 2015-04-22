@@ -26,12 +26,12 @@
 {% endblock %}
 
 <div class="container-fluid">
-    <div class="col-md-2">
+    <div class="col-md-2 col-lg-2 hidden-xs hidden-sm">
         {% block sidebar %}
 			{% include "frameworks/sidebar.html" %}
 		{% endblock %}
     </div>
-    <div class="col-md-10">
+    <div class="col-md-10 container-grey">
         {% block custome_page %}
         {% endblock %}
     </div>
