@@ -4,8 +4,8 @@
 
 
 $('#id_sidebar-opener').click(function () {
-    $('#id_sidebar-wrapper').fadeToggle('slow');
+    $('#id_sidebar-wrapper').fadeToggle('fast','linear');
     //if($('#id_content').css())
-    $('#id_content').hide('slow').toggleClass('col-md-10');
-    $('#id_content').toggleClass('col-md-12').fadeToggle('slow');
+    $('#id_content').hide('fast').toggleClass('col-md-10');
+    $('#id_content').toggleClass('col-md-12').fadeToggle('fast');
 });
